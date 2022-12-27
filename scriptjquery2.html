@@ -1,0 +1,8 @@
+<script>
+    $(".clickDelete").click(function () {
+        var elClickeado = $(this).attr('id');
+        $("#" + elClickeado).closest('div').remove();
+        let jiji = $("#carritoInsertar").is(':empty');
+        if(jiji==true) {$("#confirmarPedido").addClass("hidden"); $("#todoelcarrito").addClass("hidden")};
+    });
+</script>
